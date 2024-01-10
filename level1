@@ -54,7 +54,8 @@ sleep 0.5
                 "(4) Search the bedroom?")
 
 sleep 0.5
-             IFS=""
+        
+        IFS=""
         for choice in ${sg_choices[*]}
         do
                 echo "${choice}"
@@ -249,7 +250,7 @@ sleep 0.5
                 echo "${choice}"
                 sleep 0.5
 
-       done
+        done
 
         sleep 0.5
         echo "Waiting for your move..."
@@ -308,7 +309,7 @@ bust() {
         do
                 echo "${choice}"
                 sleep 0.5
-       done
+        done
         sleep 0.5
 
         echo "Waiting for your move..."
@@ -368,7 +369,7 @@ antique_chest() {
         done
         sleep 0.5
 
-       echo "Waiting for your move..."
+        echo "Waiting for your move..."
 
         read answer
 
