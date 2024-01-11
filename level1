@@ -1,4 +1,4 @@
-#!/usr/bin/bas
+#!/usr/bin/
 
 #Main Game Loop
 
@@ -8,11 +8,10 @@ echo "Treasure Hunter"
 echo "============================"
 
 main_menu() {
-Options=("StartaNewGame" "LoadSavedGame" "ExitGame")
+Options=("StartaNewGame" "ExitGame")
 
 echo "Press 1 to Start a New Game"
-echo "Press 2 to Load a Saved Game"
-echo "Press 3 to Exit Game"
+echo "Press 2 to Exit Game"
 
 read answer
 
@@ -25,11 +24,7 @@ case $answer in
                 ;;
 
         2)
-                echo -e 'Loading the saved game... \n'
-                ;;
-
-        3)
-                    echo -e 'Exiting the game... \n'
+                echo -e 'Exiting the game... \n'
                 exit 0
                 ;;
 
@@ -109,7 +104,7 @@ living_room() {
 
         echo -e "\nYou enter the livingroom, the lighting is dark and it's hard to see. You pull open the curtains for more sunlight and notice ashes in the fireplace, a dusty bookshelf with books and atiques, a chipped headstone, a couch, and a antique chest with a lock.\n"
 
- sleep 0.5
+sleep 0.5
 
         echo -e "\nWhere would you like to search first?\n"
 
@@ -131,17 +126,17 @@ sleep 0.5
 
 case $answer in
         1)
-                echo -e 'Searching the fireplace'
+                echo -e "Searching the fireplace"
                 fireplace
                 ;;
 
         2)
-                echo -e 'Searching the bookshelf'
+                echo -e "Searching the bookshelf"
                 bookshelf
                 ;;
 
         3)
-                echo -e 'Searching the bust'
+                echo -e "Searching the bust"
                 bust
                 ;;
 
@@ -168,7 +163,6 @@ sleep 0.5
 fireplace() {
 
         fp_choices=("(1) Search the bookshelf?"
-
                 "(2) Search the bust?"
                 "(3) Check the locked antique chest?"
                 "(4) Go back & check another room?")
@@ -195,17 +189,17 @@ sleep 0.5
 
 case $answer in
         1)
-                echo -e 'Searching the bookshelf.'
+                echo -e "Searching the bookshelf."
                 bookshelf
                 ;;
 
         2)
-                echo -e 'Searching the bust.'
+                echo -e "Searching the bust."
                 bust
                 ;;
 
         3)
-                echo -e 'Searching the locked antique chest.'
+                echo -e "Searching the locked antique chest."
                 antique_chest
                 ;;
 
@@ -239,11 +233,6 @@ sleep 0.5
                 "(3) Search the locked antique chest?"
                 "(4) Go back & check another room?")
 
-#       echo "(1)Search the fire place?"
-#        echo "(2)Examine the headstone?"
-#        echo "(3)Check the locked antique chest?"
-#       echo "(4)Check another room?"
-
         IFS=""
         for choice in ${book_choices[*]}
         do
@@ -261,17 +250,17 @@ sleep 0.5
 
 case $answer in
         1)
-                echo -e 'Searching the fireplace'
+                echo -e "Searching the fireplace"
                 fireplace
                 ;;
 
         2)
-                echo -e 'Searching the bust'
+                echo -e "Searching the bust"
                 bust
                 ;;
 
         3)
-                echo -e 'Searching the locked antique chest'
+                echo -e "Searching the locked antique chest"
                 antique_chest
                 ;;
 
@@ -297,12 +286,7 @@ bust() {
                 "(4) Go back & check another room?")
 
 
-        echo -e "\nSeems to just be a plain stone headstone.\n"
-
-#       echo "(1)Search the fire place?"
-#       echo "(2)Search the bookshelf?"
-#       echo "(3)Check the locked antique chest?"
-#       echo "(4)Check another room?"
+        echo -e "\nSeems to just be a plain stone bust of a random person.\n"
 
         IFS=""
         for choice in ${bust_choices[*]}
@@ -312,7 +296,7 @@ bust() {
         done
         sleep 0.5
 
-        echo "Waiting for your move..."
+                echo "Waiting for your move..."
 
         read answer
 
@@ -356,10 +340,6 @@ antique_chest() {
                 "(3) Seach the bust?"
                 "(4) Go back & check another room?")
 
-#       echo "(1)Search the fire place?"
-#        echo "(2)Search the bookshelf?"
-#        echo "(3)Examine the headstone?"
-#        echo "(4)Go back to the entryway"
 
         IFS=""
         for choice in ${ac_choices[*]}
@@ -414,10 +394,6 @@ another_room() {
                 "(3) Search the basement?"
                 "(4) Search the bedroom?")
 
-#        echo "(1)Search the livingroom?"
-#        echo "(2)Search the kitchen?"
-#        echo "(3)Check the basement?"
-#        echo "(4)Check the bedroom?"
 
         IFS=""
         for choice in ${ar_choices[*]}
@@ -472,9 +448,6 @@ kitchen() {
                 "(2) Go back & check another room?")
 
 
-#        echo "(1)Check the kitchen cabinets?"
-#       echo "(2)Check another room?"
-
         IFS=""
         for choice in ${kitchen_choices[*]}
         do
@@ -516,7 +489,6 @@ kitchen_cabinets() {
 
         kc_choices=("(1) Go back & check another room?")
 
-#        echo "(1)Check another room?"
 
         IFS=""
         for choice in ${kc_choices[*]}
@@ -552,11 +524,9 @@ basement() {
         echo -e "\nYou walk towards the basement door, turn the door handle and pull but the door seems to be stuck. You try again and pull harder, it finally opens and you walk down the stairs. You make it to the bottom and noticed theres some things that were left. A few bicycles, cradle, and a desk.\n"
 
         basement_choices=("(1) Search the desk?"
-                "(2) Go back & check another room?")
+                "(2) Search the cradle"
+                "(3) Go back & check another room?")
 
-
-#        echo "(1)Search the desk?"
-#        echo "(2)Check another room?"
 
         IFS=""
         for choice in ${basement_choices[*]}
@@ -578,7 +548,11 @@ case $answer in
                 desk
                 ;;
 
-        2)
+        2)      echo -e "You search the cradle, a venomous spider bites you and you die. GAME OVER "
+                main_menu
+                ;;
+
+        3)
                 echo -e "Check another room for clues"
                 another_room
                 ;;
@@ -598,8 +572,6 @@ desk() {
 
         desk_choices=("(1) Go back & check another room?")
 
-
-#        echo "(1)Check another room?"
 
         IFS=""
         for choice in ${desk_choices[*]}
@@ -630,8 +602,6 @@ desk() {
 
         desk_choices=("(1) Go back & check another room?")
 
-
-#        echo "(1)Check another room?"
 
         IFS=""
         for choice in ${desk_choices[*]}
@@ -682,10 +652,6 @@ dresser() {
                 "(3) search under the bed?"
                 "(4) Go back & check another room?")
 
-#        echo "(1)Lift the floorboard?"
-#        echo "(2)Might be nothing, check the dresser instead?"
-#        echo "(3)Check under the bed?"
-#        echo "(4)Check another room for clues?"
 
         IFS=""
         for choice in ${dresser_choices[*]}
@@ -737,9 +703,6 @@ check_dresser() {
                 "(2) search under the bed?"
                 "(3) Go back & check another room?")
 
-#       echo "(1)Go back and lift the floor board?"
-#       echo "(2)Check under the bed?"
-#       echo "(3)Check another room for clues?"
 
         IFS=""
         for choice in ${checkd_choices[*]}
@@ -787,8 +750,6 @@ bed() {
         bed_choices=("(1) Search the dresser?"
                 "(2) Go back & check another room?")
 
-#        echo "(1)Check the dresser?"
-#        echo "(2)Check another room for clues?"
 
         IFS=""
         for choice in ${bed_choices[*]}
@@ -835,9 +796,6 @@ dresser_1() {
                 "(2) Might be nothing, search the dresser instead?"
                 "(3) Go back & check another room?")
 
-#        echo -e "\n(1)Lift the floor board?"
-#        echo "(2)Might be nothing, check the dresser instead?"
-#        echo "(3)Check another room for clues?"
 
         IFS=""
         for choice in ${dresser1_choices[*]}
@@ -886,10 +844,6 @@ floorboard() {
 
         echo -e "\nOpen the box?\n"
 
-#        echo "(1)Yes?"
-#        echo "(2)No, it might be haunted?"
-#        echo "(3)It's probably nothing, just leave put it back and check another room?"
-#        echo "(4)Leave the house, there's probably no clues leading to the treasure."
 
         IFS=""
         for choice in ${floorboard_choices[*]}
@@ -937,7 +891,7 @@ treasure_map() {
 sleep 0.5
 
 source level2.sh
-
+church
 } 
 main_menu
 #Main Menu Start New Game, Load Saved Game, Exit Game
