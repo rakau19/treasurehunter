@@ -47,7 +47,7 @@ sudo apt install -y ansible
 
 #Package Management
 
-sudo apt install nmap
+sudo apt install dpkg
 
 sudo apt update
 
