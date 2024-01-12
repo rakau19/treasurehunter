@@ -583,9 +583,17 @@ desk() {
                 echo "${choice}"
                 sleep 0.5
 
+        done
+        sleep 0.5
 
+        echo "Waiting for your move..."
 
-        2)
+        read answer
+
+        sleep 0.5
+
+case $answer in
+        1)
                 echo -e "Check another room for clues."
                 another_room
                 ;;
