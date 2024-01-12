@@ -27,3 +27,36 @@ sudo apt-get update && sudo apt-get install packer
 #Vault
 
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+sudo apt install vault
+
+#Redhat Ansible
+
+sudo apt update
+
+sudo apt upgrade -y
+
+sudo apt install -y software-properties-common
+
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+
+sudo apt update
+
+sudo apt install -y ansible
+
+#Package Management
+
+sudo apt install nmap
+
+sudo apt update
+
+sudo apt upgrade
+
+#Check if installation was successful
+
+if [ $? -eq 0 ]; then
+        echo "The package was successfully install."
+else
+        echo "The package installation failed."
+fi
