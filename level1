@@ -7,6 +7,10 @@ echo "============================"
 echo "Treasure Hunter"
 echo "============================"
 
+sleep 0.5
+
+echo -e "\nLoading Game...\n"
+
 main_menu() {
 Options=("StartaNewGame" "ExitGame")
 
@@ -19,12 +23,12 @@ sleep 0.5
 
 case $answer in
         1)
-                echo -e 'We are starting the game...'
+                echo -e "We are starting the game..."
                 start_game
                 ;;
 
         2)
-                echo -e 'Exiting the game... \n'
+                echo -e "Exiting the game... \n"
                 exit 0
                 ;;
 
@@ -66,21 +70,21 @@ sleep 0.5
 
 case $answer in
         1)
-                echo -e 'Searching the livingroom'
+                echo -e "Searching the livingroom."
                 living_room
                 ;;
 
         2)
-                echo -e 'Searching the kitchen'
+                echo -e "Searching the kitchen."
                 kitchen
                 ;;
 
         3)
-                echo -e 'Searching the basement'
+                echo -e "Searching the basement."
                 basement
                 ;;
         4)
-                echo -e "Searching the bedroom"
+                echo -e "Searching the bedroom."
                 bedroom
                 ;;
 
@@ -126,27 +130,27 @@ sleep 0.5
 
 case $answer in
         1)
-                echo -e "Searching the fireplace"
+                echo -e "Searching the fireplace."
                 fireplace
                 ;;
 
         2)
-                echo -e "Searching the bookshelf"
+                echo -e "Searching the bookshelf."
                 bookshelf
                 ;;
 
         3)
-                echo -e "Searching the bust"
+                echo -e "Searching the bust."
                 bust
                 ;;
 
         4)
-                echo -e "Searching the locked antique chest"
+                echo -e "Searching the locked antique chest."
                 antique_chest
                 ;;
 
         5)
-                echo -e "Checking another room for clues"
+                echo -e "Checking another room for clues."
                 another_room
                 ;;
 
@@ -250,22 +254,22 @@ sleep 0.5
 
 case $answer in
         1)
-                echo -e "Searching the fireplace"
+                echo -e "Searching the fireplace."
                 fireplace
                 ;;
 
         2)
-                echo -e "Searching the bust"
+                echo -e "Searching the bust."
                 bust
                 ;;
 
         3)
-                echo -e "Searching the locked antique chest"
+                echo -e "Searching the locked antique chest."
                 antique_chest
                 ;;
 
         4)
-                echo -e "Checking another room for clues"
+                echo -e "Checking another room for clues."
                 another_room
                 ;;
         *)
@@ -304,20 +308,20 @@ bust() {
 
 case $answer in
         1)
-                echo -e 'Searching the fireplace'
+                echo -e "Searching the fireplace."
                 fireplace
                 ;;
         1)
-                echo -e 'Searching the bookshelf.'
+                echo -e "Searching the bookshelf."
                 bookshelf
                 ;;
         2)
-                echo -e 'Searching the locked antique chest'
+                echo -e "Searching the locked antique chest."
                 antique_chest
                 ;;
 
         2)
-                echo -e "Checking another room for clues"
+                echo -e "Checking another room for clues."
                 another_room
                 ;;
 
@@ -357,22 +361,22 @@ antique_chest() {
 
 case $answer in
         1)
-                echo -e 'Searching the fireplace'
+                echo -e "Searching the fireplace."
                 fireplace
                 ;;
 
         2)
-                echo -e 'Searching the bookshelf'
+                echo -e "Searching the bookshelf."
                 bookshelf
                 ;;
 
         3)
-                echo -e 'Searching the bust'
+                echo -e "Searching the bust."
                 bust
                 ;;
 
         4)
-                echo -e "Checking another room for clues"
+                echo -e "Checking another room for clues."
                 another_room
                 ;;
 
@@ -411,22 +415,22 @@ another_room() {
 
 case $answer in
         1)
-                echo -e 'Searching the livingroom'
+                echo -e "Searching the livingroom."
                 living_room
                 ;;
 
         2)
-                echo -e 'Searching the kitchen'
+                echo -e "Searching the kitchen."
                 kitchen
                 ;;
 
         3)
-                echo -e 'Searching the basement'
+                echo -e "Searching the basement."
                 basement
                 ;;
 
         4)
-                echo -e "Searching the bedroom"
+                echo -e "Searching the bedroom."
                 bedroom
                 ;;
 
@@ -464,12 +468,12 @@ kitchen() {
 
 case $answer in
         1)
-               echo -e 'Searching the kitchen cabinets.'
+               echo -e "Searching the kitchen cabinets."
                 kitchen_cabinets
                 ;;
 
         2)
-                echo -e "Checking another room for clues"
+                echo -e "Checking another room for clues."
                 another_room
                 ;;
 
@@ -506,7 +510,7 @@ kitchen_cabinets() {
 
 case $answer in
         1)
-                echo -e "Checking another room for clues"
+                echo -e "Checking another room for clues."
                 another_room
                 ;;
 
@@ -553,7 +557,7 @@ case $answer in
                 ;;
 
         3)
-                echo -e "Check another room for clues"
+                echo -e "Check another room for clues."
                 another_room
                 ;;
 
@@ -579,11 +583,10 @@ desk() {
                 echo "${choice}"
                 sleep 0.5
 
-               desk
-                ;;
+
 
         2)
-                echo -e "Check another room for clues"
+                echo -e "Check another room for clues."
                 another_room
                 ;;
 
