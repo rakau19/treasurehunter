@@ -10,7 +10,7 @@ sudo apt purge -y packer
 
 sudo apt purge -y ansible
 
-sudo apt purge -y nmap
+sudo apt purge -y dpkg
 
 #Check if Removal of packages was successful
 
