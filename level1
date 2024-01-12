@@ -41,7 +41,7 @@ case $answer in
 start_game() {
 
         echo -e "\n====Level 1====\n"
-        echo -e "\nYou walk up to the door, jiggle the door knob and noticed its unlocked. You open the door and walk inside to the entryway. the one your grandpa used to tell you stories about a hidden treasure left by pirates from the 1600s.\n"
+       "\nYou walk up to the door, jiggle the door knob and noticed its unlocked. You open the door and walk inside to the entryway. the one your grandpa used to tell you stories about a hidden treasure left Captain Azure Bash Kraven from the 1600s. He attacked every ship he encountered taking everything, until one day he got sick and he knew other pirates would be out to get him since he was vulnerable. So he asked his most trusted men to help him hide the gold. \n"
 
         echo -e "\nWhere would you like to search first?\n"
 
@@ -224,7 +224,7 @@ sleep 0.5
 
 bookshelf() {
 
-        echo -e "\nOn the bookshelf you notice a quite a few books (dictonaries, books on pirates and lost treasures, history, and shipwrecks around the world), some pictures of what looks to be of the family that lived there and a picture of Caption Azure "Bash" Kraven. The pirate your grandpa told you stories about when you were a little kid, who terrorized the seas.\n"
+        echo -e "\nOn the bookshelf you notice a quite a few books (dictonaries, books on pirates and lost treasures, history, and shipwrecks around the world), some pictures of what looks to be of the family that lived there and a picture of Captain Azure "Bash" Kraven. The pirate your grandpa told you stories about when you were a little kid, who terrorized the seas.\n"
 
 sleep 0.5
 
