@@ -33,7 +33,7 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid \n"
+                echo -e "Invalid Choice.\n"
                 ;;
         esac
 }
@@ -47,13 +47,15 @@ start_game() {
 
 sleep 0.5
 
-        sg_choices=("(1) Search the livingroom"
+      sg_choices=("(1) Search the livingroom"
                 "(2) Search the kitchen?"
                 "(3) Search the basement?"
                 "(4) Search the bedroom?")
 
 sleep 0.5
-        
+
+while true ;
+do
         IFS=""
         for choice in ${sg_choices[*]}
         do
@@ -89,10 +91,11 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+done
 
 }
 
@@ -114,6 +117,8 @@ sleep 0.5
 
 sleep 0.5
 
+while true ;
+do
         IFS=""
         for choice in ${lr_choices[*]}
         do
@@ -155,10 +160,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -177,6 +184,8 @@ fireplace() {
 
 sleep 0.5
 
+while true ;
+do
         IFS=""
         for choice in ${fp_choices[*]}
         do
@@ -213,10 +222,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -237,6 +248,8 @@ sleep 0.5
                 "(3) Search the locked antique chest?"
                 "(4) Go back & check another room?")
 
+while true ;
+do
         IFS=""
         for choice in ${book_choices[*]}
         do
@@ -273,10 +286,12 @@ case $answer in
                 another_room
                 ;;
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -292,6 +307,8 @@ bust() {
 
         echo -e "\nSeems to just be a plain stone bust of a random person.\n"
 
+while true ;
+do
         IFS=""
         for choice in ${bust_choices[*]}
         do
@@ -326,10 +343,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -344,7 +363,8 @@ antique_chest() {
                 "(3) Seach the bust?"
                 "(4) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${ac_choices[*]}
         do
@@ -381,9 +401,11 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
         esac
+
+done
 
 }
 
@@ -398,7 +420,8 @@ another_room() {
                 "(3) Search the basement?"
                 "(4) Search the bedroom?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${ar_choices[*]}
         do
@@ -435,10 +458,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -451,7 +476,8 @@ kitchen() {
         kitchen_choices=("(1) Search the kitchen cabinets?"
                 "(2) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${kitchen_choices[*]}
         do
@@ -478,10 +504,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -493,7 +521,8 @@ kitchen_cabinets() {
 
         kc_choices=("(1) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${kc_choices[*]}
         do
@@ -515,10 +544,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -531,7 +562,8 @@ basement() {
                 "(2) Search the cradle"
                 "(3) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${basement_choices[*]}
         do
@@ -562,10 +594,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                 echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -576,7 +610,8 @@ desk() {
 
         desk_choices=("(1) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${desk_choices[*]}
         do
@@ -599,10 +634,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -613,14 +650,15 @@ desk() {
 
         desk_choices=("(1) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${desk_choices[*]}
         do
                 echo "${choice}"
                 sleep 0.5
 
-       done
+        done
         sleep 0.5
 
         echo "Waiting for your move..."
@@ -646,10 +684,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -663,7 +703,8 @@ dresser() {
                 "(3) search under the bed?"
                 "(4) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${dresser_choices[*]}
         do
@@ -698,10 +739,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -714,7 +757,8 @@ check_dresser() {
                 "(2) search under the bed?"
                 "(3) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${checkd_choices[*]}
         do
@@ -746,10 +790,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+done
+
 }
 
 sleep 0.5
@@ -761,7 +807,8 @@ bed() {
         bed_choices=("(1) Search the dresser?"
                 "(2) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${bed_choices[*]}
         do
@@ -793,10 +840,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+done
+
 }
 
 sleep 0.5
@@ -807,7 +856,8 @@ dresser_1() {
                 "(2) Might be nothing, search the dresser instead?"
                 "(3) Go back & check another room?")
 
-
+while true ;
+do
         IFS=""
         for choice in ${dresser1_choices[*]}
         do
@@ -816,7 +866,7 @@ dresser_1() {
         done
         sleep 0.5
 
-       echo "Waiting for your move..."
+        echo "Waiting for your move..."
 
         read answer
 
@@ -839,10 +889,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+done
+
 }
 
 sleep 0.5
@@ -855,7 +907,8 @@ floorboard() {
 
         echo -e "\nOpen the box?\n"
 
-
+while true ;
+do
         IFS=""
         for choice in ${floorboard_choices[*]}
         do
@@ -887,10 +940,13 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
+
 }
 
 sleep 0.5
