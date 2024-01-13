@@ -19,6 +19,8 @@ sleep 0.5
 
 sleep 0.5
 
+while true ;
+do
        IFS=""
         for choice in ${house_choices[*]}
         do
@@ -45,10 +47,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -67,6 +71,8 @@ sleep 0.5
 
 sleep 0.5
 
+while true ;
+do
         IFS=""
         for choice in ${rc_choices[*]}
         do
@@ -93,10 +99,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -114,7 +122,9 @@ sleep 0.5
 
 sleep 0.5
 
-        IFS=""
+while true ;
+do
+       IFS=""
         for choice in ${tt_choices[*]}
         do
                 echo "${choice}"
@@ -143,11 +153,13 @@ sleep 0.5
                 rock_climbing
                 ;;
 
-        *)
-                echo -n "invalid"
+         *)
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -164,6 +176,8 @@ sleep 0.5
 
 sleep 0.5
 
+while true ;
+do
         IFS=""
         for choice in ${or_choices[*]}
         do
@@ -194,10 +208,12 @@ sleep 0.5
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -215,7 +231,9 @@ sleep 0.5
 
 sleep 0.5
 
-        IFS=""
+while true ;
+do
+       IFS=""
         for choice in ${nr_choices[*]}
         do
                 echo "${choice}"
@@ -241,10 +259,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -256,7 +276,9 @@ jail() {
 
 sleep 0.5
 
-        IFS=""
+while true ;
+do
+       IFS=""
         for choice in ${jail_choices[*]}
         do
                 echo "${choice}"
@@ -278,10 +300,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -295,7 +319,9 @@ descend() {
 
 sleep 0.5
 
-        IFS=""
+while true ;
+do
+       IFS=""
         for choice in ${descend_choices[*]}
         do
                 echo "${choice}"
@@ -316,10 +342,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -335,7 +363,9 @@ sleep 0.5
 
 sleep 0.5
 
-        IFS=""
+while true ;
+do
+       IFS=""
         for choice in ${steady_choices[*]}
         do
                 echo "${choice}"
@@ -356,10 +386,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -377,7 +409,9 @@ sleep 0.5
 
 sleep 0.5
 
-        IFS=""
+while true ;
+do
+       IFS=""
         for choice in ${comeback_choices[*]}
         do
                 echo "${choice}"
@@ -403,10 +437,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
