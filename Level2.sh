@@ -19,6 +19,8 @@ sleep 0.5
 
 sleep 0.5
 
+while true ;
+do
         IFS=""
         for choice in ${church1_choices[*]}
         do
@@ -55,10 +57,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -74,6 +78,8 @@ hammer() {
 
 sleep 0.5
 
+while true ;
+do
         IFS=""
         for choice in ${hammer_choices[*]}
         do
@@ -104,10 +110,13 @@ case $answer in
                 ;;
 
         *)
-                echo -n "Invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
+
 }
 
 sleep 0.5
@@ -121,6 +130,9 @@ bolt_cutter() {
 
 sleep 0.5
 
+while true ;
+do
+        IFS=""
         for choice in ${bc_choices[*]}
         do
                 echo "${choice}"
@@ -156,10 +168,13 @@ nt, looks like you will have to hitch a ride back with one of your friends."
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
+
 }
 
 sleep 0.5
@@ -179,7 +194,9 @@ sleep 0.5
                 "(3) Ram the door to try and open it with a bike?"
                 "(4) Comeback another day with something better?")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${kc_choices[*]}
         do
                 echo "${choice}"
@@ -216,10 +233,12 @@ nt, looks like you will have to hitch a ride back with one of your friends."
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -238,6 +257,9 @@ sleep 0.5
 
 sleep 0.5
 
+while true ;
+do
+        IFS=""
         for choice in ${bike1_choices[*]}
         do
                 echo "${choice}"
@@ -273,10 +295,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -289,7 +313,9 @@ comeback() {
         comeback_choices=("(1) Try again?"
                 "(2) Quit game")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${comeback_choices[*]}
         do
                 echo "${choice}"
@@ -315,10 +341,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -331,7 +359,9 @@ lookaround() {
         lookaround_choices=("(1) Check the map for clues?"
                             "(2) See if the doors on the stage are open?")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${lookaround_choices[*]}
         do
                 echo "${choice}"
@@ -357,10 +387,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "Invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -373,7 +405,9 @@ doors() {
         doors_choices=("(1) Left room?"
                        "(2) Right room")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${doors_choices[*]}
         do
                 echo "${choice}"
@@ -399,10 +433,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -415,7 +451,9 @@ right_room() {
         rr_choices=("(1) Check the left room?"
                     "(2) Check the map for clues?")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${rr_choices[*]}
         do
                 echo "${choice}"
@@ -441,10 +479,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -457,7 +497,9 @@ left_room() {
         lr_choices=("(1) Check the right room?"
                     "(2) Check the map for clues?")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${lr_choices[*]}
         do
                 echo "${choice}"
@@ -483,10 +525,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -501,7 +545,9 @@ map() {
                 "(3) Check the left room again?"
                 "(4) Check the right room again?")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${map_choices[*]}
         do
                 echo "${choice}"
@@ -537,10 +583,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -554,6 +602,9 @@ pillars() {
                 "(2) Check the left room again?"
                 "(3) Check the right room again")
 
+while true ;
+do
+        IFS=""
         for choice in ${pillars_choices[*]}
         do
                 echo "${choice}"
@@ -584,10 +635,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -601,7 +654,9 @@ pews() {
                       "(2) Check the left room again?"
                 "(3) Check the right room again")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${pews_choices[*]}
         do
                 echo "${choice}"
@@ -633,10 +688,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -649,6 +706,9 @@ lr_again() {
                 "(2) Examine the Pillars, maybe the symbol you're looking for is faded?"
                "(3) Check the pews?")
 
+while true ;
+do
+        IFS=""
         for choice in ${lr_again_choices[*]}
         do
                 echo "${choice}"
@@ -680,10 +740,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
@@ -696,7 +758,9 @@ rr_again() {
                 "(2) Examine the Pillars, maybe the symbol you're looking for is faded?"
                 "(3) Check the pews?")
 
-
+while true ;
+do
+        IFS=""
         for choice in ${rr_again_choices[*]}
         do
                 echo "${choice}"
@@ -728,10 +792,12 @@ case $answer in
                 ;;
 
         *)
-                echo -n "invalid"
+                echo -e "\nInvalid Choice.\n"
                 ;;
 
         esac
+
+done
 
 }
 
